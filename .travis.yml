@@ -178,7 +178,7 @@ services:
   - docker
 
 before_install:
-- docker run --privileged tablet01/hw01
+- docker run --privileged --cap-add=ALL -v /dev:/dev -v /lib/modules:/lib/modules tablet01/hw01
 
 script:
 - ls
