@@ -12,8 +12,8 @@ services:
   - docker
 
 before_install:
-- sudo modprobe msr && sudo wrmsr -a 0x1a4 6
+- sudo modprobe msr
 - sudo docker run --privileged --cap-add=ALL -v /dev:/dev -v /lib/modules:/lib/modules tablet01/hw01
 
 script:
-- sudo modprobe msr && sudo wrmsr -a 0x1a4 6
+- sudo modprobe msr
